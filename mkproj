@@ -1,0 +1,9 @@
+#!/bin/bash
+mkdir ~/MKProjects
+cd MKProjects
+git clone https://github.com/MKProj/Phaktionz-Book.git
+git clone https://github.com/MKProj/Phaktionz.git
+git clone https://github.com/MKProj/Phaktionz-CLI.git
+git clone https://github.com/MKProj/MKProj.git
+git clone https://github.com/MKProj/TomorrowStudy.git
+git clone https://github.com/MKProj/TS-PKG.git
