@@ -6,5 +6,8 @@ story is shown to be open-source so we can get opinions from the community, and 
 
 In terms of _Content_ and _Development_, we have the following projects, respectively: 
 
-- **Phaktionz Book**
-  - 
+- **Phaktionz Book**:
+  - Recommended: 
+    - Basics in Git
+    -  Markdown
+
