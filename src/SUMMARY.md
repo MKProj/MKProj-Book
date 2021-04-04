@@ -15,6 +15,6 @@
     - [Phaktionz](./Repo/03-phk.md)
     - [Phaktionz-CLI](./Repo/04-phk-cli.md)
     - [TS PKG](./Repo/05-ts-pkg.md)
-    - [Phaktionz Book](./Repo/06-phk-book.md)
+    - [haktionz Book](./Repo/06-phk-book.md)
 ---
 [Resources](./resources.md) 

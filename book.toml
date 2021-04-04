@@ -1,3 +1,23 @@
 [book]
 title="MKProjects Documentation"
 author="Mustafif Khan"
+[output.html]
+preferred-dark-theme = "ayu"
+default-theme = "ayu"
+git-repository-url = "https://github.com/MKProj/MKProj"
+git-repository-icon = "fa-github"
+copy-fonts = true
+no-section-label = true
+copy-js = true
+
+
+[output.html.search]
+limit-results = 30
+teaser-word-count = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
+copy-js = true                               
