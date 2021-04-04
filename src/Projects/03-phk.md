@@ -6,8 +6,14 @@ story is shown to be open-source so we can get opinions from the community, and 
 
 In terms of _Content_ and _Development_, we have the following projects, respectively: 
 
-- **Phaktionz Book**:
+## Phaktionz Book
   - Recommended: 
     - Basics in Git
     -  Markdown
+
+The Phaktionz Book is an all in one book to explain the various aspects of Phaktionz TCG, and all work within 
+it would be translated to Markdown. Keep in mind that this project does internally use Rust, and Rust would need to 
+be installed, as well as mdbook. All will be explained with the getting started section.
+
+
 
