@@ -15,5 +15,13 @@ The Phaktionz Book is an all in one book to explain the various aspects of Phakt
 it would be translated to Markdown. Keep in mind that this project does internally use Rust, and Rust would need to 
 be installed, as well as mdbook. All will be explained with the getting started section.
 
-
+## Phaktionz CLI 
+- Recommended: 
+  - Knowledge in Git
+  - Rust
+  - Latex
+  - Markdown
+  - Bash
+**Required Currently: Debian Linux System**
+The Phaktionz CLI is like the Phaktionz Book but comes in the small form-factor as a Command Line application. 
 
