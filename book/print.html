@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="Projects/00-project.html">Picking a Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Projects/01-contvsdev.html">Content Vs Development</a></li><li class="chapter-item expanded "><a href="Projects/02-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="Projects/03-phk.html">Phaktionz</a></li></ol></li><li class="chapter-item expanded "><a href="Getting-Started/00-starting.html">Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Getting-Started/01-contact.html">Contact</a></li><li class="chapter-item expanded "><a href="Getting-Started/02-repo.html">Working on a Repository</a></li><li class="chapter-item expanded "><a href="Getting-Started/03-bestprac.html">Best Practices</a></li></ol></li><li class="chapter-item expanded "><a href="Repo/00-repo.html">Repositories</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Repo/01-mkproj.html">MKProj</a></li><li class="chapter-item expanded "><a href="Repo/02-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="Repo/03-phk.html">Phaktionz</a></li><li class="chapter-item expanded "><a href="Repo/04-phk-cli.html">Phaktionz-CLI</a></li><li class="chapter-item expanded "><a href="Repo/05-ts-pkg.html">TS PKG</a></li><li class="chapter-item expanded "><a href="Repo/06-phk-book.html">haktionz Book</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="resources.html">Resources</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Projects/00-project.html">Picking a Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Projects/01-contvsdev.html">Content Vs Development</a></li><li class="chapter-item expanded "><a href="Projects/02-release.html">Releases/Version System</a></li><li class="chapter-item expanded "><a href="Projects/03-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="Projects/04-phk.html">Phaktionz</a></li><li class="chapter-item expanded "><a href="Projects/05-uc.html">UniConv</a></li></ol></li><li class="chapter-item expanded "><a href="Getting-Started/00-starting.html">Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Getting-Started/01-contact.html">Contact</a></li><li class="chapter-item expanded "><a href="Getting-Started/02-repo.html">Working on a Repository</a></li><li class="chapter-item expanded "><a href="Getting-Started/03-bestprac.html">Best Practices</a></li></ol></li><li class="chapter-item expanded "><a href="Repo/00-repo.html">Repositories</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Repo/01-mkproj.html">MKProj</a></li><li class="chapter-item expanded "><a href="Repo/02-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="Repo/03-phk.html">Phaktionz</a></li><li class="chapter-item expanded "><a href="Repo/04-uc.html">UniConv</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="resources.html">Resources</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -239,6 +239,52 @@ we will figure out if it is possible. </p>
 </ul>
 </li>
 </ul>
+<h1 id="releasesversion-system"><a class="header" href="#releasesversion-system">Releases/Version System</a></h1>
+<p>In the MKProjects Rust Command Line Programs: </p>
+<ul>
+<li>Phaktionz CLI</li>
+<li>Tomorrow Study's Packager</li>
+<li>UniConv </li>
+</ul>
+<p>They will all follow the same <strong>Release</strong> and <strong>Version</strong> system, so how about we 
+talk about each respectively. </p>
+<h2 id="release-system"><a class="header" href="#release-system">Release System</a></h2>
+<p>In our release system, we will be following the edge -&gt; beta -&gt; stable channel format. 
+Each of these programs will have the following branches to indicate the following channels: </p>
+<ul>
+<li>main =&gt; stable channel</li>
+<li>beta =&gt; beta channel</li>
+<li>edge =&gt; edge channel</li>
+</ul>
+<p>So now you may ask what the difference of these may be? Well they correspond to the different stages 
+of the applications build process.</p>
+<h3 id="edge"><a class="header" href="#edge">Edge:</a></h3>
+<ul>
+<li>The everyday changes of the code that is always changing, and may be unstable </li>
+<li>Once feature may be stable, it will be moved to the beta channel</li>
+</ul>
+<h3 id="beta"><a class="header" href="#beta">Beta:</a></h3>
+<ul>
+<li>The beta channel is used to organize all the new changes, and apply patches to find the best way to implement them</li>
+<li>The beta channel is pre-production and should be relatively stable during production </li>
+</ul>
+<h3 id="stable"><a class="header" href="#stable">Stable:</a></h3>
+<ul>
+<li>The stable channel is the ready to use code</li>
+<li>All the code should be working properly and safely</li>
+<li>Depending on the new feature: 
+<ul>
+<li>The Major or Minor will be incremented and the patch will be reset to 0</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-system"><a class="header" href="#version-system">Version System</a></h2>
+<p>The projects follow the same semantic version system other Rust projects use:</p>
+<pre><code>Version M.m.P
+M - Major change (Like a new feature)
+m - Minor change (New API)
+P - Patches (Fixes on the code)
+</code></pre>
 <h1 id="tomorrows-study"><a class="header" href="#tomorrows-study">Tomorrow's Study</a></h1>
 <p>Tomorrow's Study is a project aimed to bring educational resources in a simplistic and
 convenient way. Some things that are being worked on is the choice between a Latex and 
@@ -301,13 +347,38 @@ be installed, as well as mdbook. All will be explained with the getting started 
 <li>Rust</li>
 <li>Latex</li>
 <li>Markdown</li>
-<li>Bash
-<strong>Required Currently: Debian Linux System</strong>
-The Phaktionz CLI is like the Phaktionz Book but comes in the small form-factor as a Command Line application. </li>
+<li>Bash</li>
 </ul>
 </li>
 </ul>
+<p><strong>Required Currently: Unix System (Mac or Linux)</strong></p>
+<h1 id="uniconv"><a class="header" href="#uniconv">UniConv</a></h1>
+<p>UniConv or Unit Converter is a basic Unit Converter Command Line program. This program contains the same parameters for all
+the functions, and is being worked to have the following modes: </p>
+<ul>
+<li>Temperature Conversions </li>
+<li>Length Conversions </li>
+<li>Time Conversions </li>
+<li>Mass Conversions </li>
+<li>Speed Conversions </li>
+</ul>
+<p>It has a simple approach when you do the program: </p>
+<pre><code class="language-bash">$ uniconv &lt;mode&gt; &lt;unit&gt; &lt;conversion&gt;
+# Let's convert 90 degrees Fahrenheit to Celsius 
+$ uniconv temp 90 fahr_to_cels
+# Need a list of all the modes and conversions
+$ uniconv list 
+</code></pre>
+<p>Working on this project would mean expanding this library a lot more, and 
+enabling various modes of conversion. </p>
 <h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<p>When you want to get started in MKProjects, think about the following:</p>
+<ul>
+<li>Do I want to work on an existing or new project?</li>
+<li>Am I more in the field of Content or Development?</li>
+<li>Am I willing to learn a lot of new things coming to this?</li>
+<li>What can help with the most?</li>
+</ul>
 <h1 id="contact"><a class="header" href="#contact">Contact</a></h1>
 <h1 id="working-on-a-repository"><a class="header" href="#working-on-a-repository">Working on a Repository</a></h1>
 <h1 id="best-practices"><a class="header" href="#best-practices">Best Practices</a></h1>
@@ -315,9 +386,7 @@ The Phaktionz CLI is like the Phaktionz Book but comes in the small form-factor 
 <h1 id="mkproj"><a class="header" href="#mkproj">MKProj</a></h1>
 <h1 id="tomorrows-study-1"><a class="header" href="#tomorrows-study-1">Tomorrow's Study</a></h1>
 <h1 id="phaktionz-1"><a class="header" href="#phaktionz-1">Phaktionz</a></h1>
-<h1 id="phaktionz-cli-1"><a class="header" href="#phaktionz-cli-1">Phaktionz-CLI</a></h1>
-<h1 id="ts-pkg"><a class="header" href="#ts-pkg">TS PKG</a></h1>
-<h1 id="phaktionz-book-1"><a class="header" href="#phaktionz-book-1">Phaktionz Book</a></h1>
+<h1 id="uniconv-1"><a class="header" href="#uniconv-1">UniConv</a></h1>
 <h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
 
                     </main>

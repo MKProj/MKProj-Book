@@ -1,5 +1,4 @@
 # Phaktionz
-
 Phaktionz is a new way to look into Trading Card Games, with the drive of having a more open-source community behind the development of the game. 
 This is one of the only projects that is aimed to be a profit project, however that is outside of the MKProject's line. Many of the rules and
 story is shown to be open-source so we can get opinions from the community, and make it a game that can have the play style of everyone. 
@@ -21,7 +20,6 @@ be installed, as well as mdbook. All will be explained with the getting started 
   - Rust
   - Latex
   - Markdown
-  - Bash
-**Required Currently: Debian Linux System**
-The Phaktionz CLI is like the Phaktionz Book but comes in the small form-factor as a Command Line application. 
+  - Bash  
 
+**Required Currently: Unix System (Mac or Linux)**

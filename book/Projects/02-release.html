@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Tomorrow&#x27;s Study - MKProjects Documentation</title>
+        <title>Releases/Version System - MKProjects Documentation</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../Projects/00-project.html">Picking a Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Projects/01-contvsdev.html">Content Vs Development</a></li><li class="chapter-item expanded "><a href="../Projects/02-ts.html" class="active">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="../Projects/03-phk.html">Phaktionz</a></li></ol></li><li class="chapter-item expanded "><a href="../Getting-Started/00-starting.html">Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Getting-Started/01-contact.html">Contact</a></li><li class="chapter-item expanded "><a href="../Getting-Started/02-repo.html">Working on a Repository</a></li><li class="chapter-item expanded "><a href="../Getting-Started/03-bestprac.html">Best Practices</a></li></ol></li><li class="chapter-item expanded "><a href="../Repo/00-repo.html">Repositories</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Repo/01-mkproj.html">MKProj</a></li><li class="chapter-item expanded "><a href="../Repo/02-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="../Repo/03-phk.html">Phaktionz</a></li><li class="chapter-item expanded "><a href="../Repo/04-phk-cli.html">Phaktionz-CLI</a></li><li class="chapter-item expanded "><a href="../Repo/05-ts-pkg.html">TS PKG</a></li><li class="chapter-item expanded "><a href="../Repo/06-phk-book.html">haktionz Book</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../resources.html">Resources</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../Projects/00-project.html">Picking a Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Projects/01-contvsdev.html">Content Vs Development</a></li><li class="chapter-item expanded "><a href="../Projects/02-release.html" class="active">Releases/Version System</a></li><li class="chapter-item expanded "><a href="../Projects/03-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="../Projects/04-phk.html">Phaktionz</a></li><li class="chapter-item expanded "><a href="../Projects/05-uc.html">UniConv</a></li></ol></li><li class="chapter-item expanded "><a href="../Getting-Started/00-starting.html">Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Getting-Started/01-contact.html">Contact</a></li><li class="chapter-item expanded "><a href="../Getting-Started/02-repo.html">Working on a Repository</a></li><li class="chapter-item expanded "><a href="../Getting-Started/03-bestprac.html">Best Practices</a></li></ol></li><li class="chapter-item expanded "><a href="../Repo/00-repo.html">Repositories</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Repo/01-mkproj.html">MKProj</a></li><li class="chapter-item expanded "><a href="../Repo/02-ts.html">Tomorrow's Study</a></li><li class="chapter-item expanded "><a href="../Repo/03-phk.html">Phaktionz</a></li><li class="chapter-item expanded "><a href="../Repo/04-uc.html">UniConv</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../resources.html">Resources</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,43 +167,52 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="tomorrows-study"><a class="header" href="#tomorrows-study">Tomorrow's Study</a></h1>
-<p>Tomorrow's Study is a project aimed to bring educational resources in a simplistic and
-convenient way. Some things that are being worked on is the choice between a Latex and 
-Markdown format. </p>
-<p>The Latex is built to have a nice looking document to be downloaded and kept in your system, 
-and the markdown as a web format. </p>
-<p>Here are the different type of content that will be provided in Tomorrow's Study: </p>
+                        <h1 id="releasesversion-system"><a class="header" href="#releasesversion-system">Releases/Version System</a></h1>
+<p>In the MKProjects Rust Command Line Programs: </p>
 <ul>
-<li>
-<p>Formula Sheets </p>
+<li>Phaktionz CLI</li>
+<li>Tomorrow Study's Packager</li>
+<li>UniConv </li>
+</ul>
+<p>They will all follow the same <strong>Release</strong> and <strong>Version</strong> system, so how about we 
+talk about each respectively. </p>
+<h2 id="release-system"><a class="header" href="#release-system">Release System</a></h2>
+<p>In our release system, we will be following the edge -&gt; beta -&gt; stable channel format. 
+Each of these programs will have the following branches to indicate the following channels: </p>
 <ul>
-<li>Only contains important equations or key information </li>
-<li>Basic Latex Template &amp; Markdown mdbook</li>
+<li>main =&gt; stable channel</li>
+<li>beta =&gt; beta channel</li>
+<li>edge =&gt; edge channel</li>
+</ul>
+<p>So now you may ask what the difference of these may be? Well they correspond to the different stages 
+of the applications build process.</p>
+<h3 id="edge"><a class="header" href="#edge">Edge:</a></h3>
+<ul>
+<li>The everyday changes of the code that is always changing, and may be unstable </li>
+<li>Once feature may be stable, it will be moved to the beta channel</li>
+</ul>
+<h3 id="beta"><a class="header" href="#beta">Beta:</a></h3>
+<ul>
+<li>The beta channel is used to organize all the new changes, and apply patches to find the best way to implement them</li>
+<li>The beta channel is pre-production and should be relatively stable during production </li>
+</ul>
+<h3 id="stable"><a class="header" href="#stable">Stable:</a></h3>
+<ul>
+<li>The stable channel is the ready to use code</li>
+<li>All the code should be working properly and safely</li>
+<li>Depending on the new feature: 
+<ul>
+<li>The Major or Minor will be incremented and the patch will be reset to 0</li>
 </ul>
 </li>
-<li>
-<p>Basics </p>
-<ul>
-<li>Contains content of various sections of a course in a condense format </li>
-<li>Textbook based Latex Template &amp; Markdown mdbook</li>
 </ul>
-</li>
-<li>
-<p>Practice </p>
-<ul>
-<li>Contains questions ranging from easy to difficult </li>
-<li>Answer Sheet on last page </li>
-<li>Basic Latex Template <strong>(NO Markdown mdbook)</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="tomorrow-study-packager"><a class="header" href="#tomorrow-study-packager">Tomorrow Study Packager</a></h2>
-<p>The tomorrow study packager is a command line application that can be installed to directly install or view 
-the content of Tomorrow's Study's Library. </p>
-<p>The Packager is built in Rust and all functions related to it uses the mkproj-lib crate. 
-More information can be found in the resources section. </p>
-<p>All repositories related to Tomorrow's Study will be found in Tomorrow's Study under the Repositories section. </p>
+<h2 id="version-system"><a class="header" href="#version-system">Version System</a></h2>
+<p>The projects follow the same semantic version system other Rust projects use:</p>
+<pre><code>Version M.m.P
+M - Major change (Like a new feature)
+m - Minor change (New API)
+P - Patches (Fixes on the code)
+</code></pre>
 
                     </main>
 
@@ -216,7 +225,7 @@ More information can be found in the resources section. </p>
                         
 
                         
-                            <a rel="next" href="../Projects/03-phk.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../Projects/03-ts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -234,7 +243,7 @@ More information can be found in the resources section. </p>
                 
 
                 
-                    <a rel="next" href="../Projects/03-phk.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../Projects/03-ts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
