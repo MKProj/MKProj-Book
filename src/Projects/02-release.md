@@ -44,9 +44,9 @@ These names will always be named after a famous scientist or influence in scienc
 
 The projects follow the same semantic version system other Rust projects use:
 
-```
-Version M.m.P
-M - Major change (Like a new feature)
-m - Minor change (New API)
-P - Patches (Fixes on the code)
-```
+
+Version M.m.P:  
+
+* M - Major change (Like a new feature)
+* m - Minor change (New API)
+* P - Patches (Fixes on the code)
