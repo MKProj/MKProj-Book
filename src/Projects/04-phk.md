@@ -21,5 +21,3 @@ be installed, as well as mdbook. All will be explained with the getting started 
   - Latex
   - Markdown
   - Bash  
-
-**Required Currently: Unix System (Mac or Linux)**

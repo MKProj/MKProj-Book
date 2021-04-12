@@ -5,7 +5,7 @@ In MKProjects I split jobs into two different categories, _Content_ and _Develop
 - **Development**: 
     - Deals with the backend and frontend of either project. 
     - Such projects can be development on the website, to console applications (TS Package Manager). 
-    - Recommended OS: Any Linux Debian Distro or Windows Linux Subsystem 
+    - Recommended OS: Any Operating System, preferably Unix
     - Recommended: 
         - Knowledge in Git
         - Rust

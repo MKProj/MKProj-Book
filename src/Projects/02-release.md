@@ -11,9 +11,11 @@ talk about each respectively.
 ## Release System
 
 In our release system, we will be following the edge -> beta -> stable channel format. 
+A new Stable release will always come in 4 weeks at around the 15th of every month. 
 Each of these programs will have the following branches to indicate the following channels: 
 
-- main => stable channel
+- main => (Will Contain the Current Stable Release)
+- stable => stable channel
 - beta => beta channel
 - edge => edge channel
 
@@ -25,14 +27,18 @@ of the applications build process.
 - Once feature may be stable, it will be moved to the beta channel
 
 ### Beta: 
-- The beta channel is used to organize all the new changes, and apply patches to find the best way to implement them
+- The beta channel is used to organize all the new changes
 - The beta channel is pre-production and should be relatively stable during production 
 
 ### Stable: 
 - The stable channel is the ready to use code
 - All the code should be working properly and safely
 - Depending on the new feature: 
-  - The Major or Minor will be incremented and the patch will be reset to 0
+  - The Major or Minor will be incremented
+
+### Code Names 
+Each new release will have an accompanying code name associated with it, like v0.5's Aristotle code name. 
+These names will always be named after a famous scientist or influence in science. 
 
 ## Version System 
 

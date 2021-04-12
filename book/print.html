@@ -212,7 +212,7 @@ we will figure out if it is possible. </p>
 <ul>
 <li>Deals with the backend and frontend of either project. </li>
 <li>Such projects can be development on the website, to console applications (TS Package Manager). </li>
-<li>Recommended OS: Any Linux Debian Distro or Windows Linux Subsystem </li>
+<li>Recommended OS: Any Operating System, preferably Unix</li>
 <li>Recommended: 
 <ul>
 <li>Knowledge in Git</li>
@@ -250,9 +250,11 @@ we will figure out if it is possible. </p>
 talk about each respectively. </p>
 <h2 id="release-system"><a class="header" href="#release-system">Release System</a></h2>
 <p>In our release system, we will be following the edge -&gt; beta -&gt; stable channel format. 
+A new Stable release will always come in 4 weeks at around the 15th of every month. 
 Each of these programs will have the following branches to indicate the following channels: </p>
 <ul>
-<li>main =&gt; stable channel</li>
+<li>main =&gt; (Will Contain the Current Stable Release)</li>
+<li>stable =&gt; stable channel</li>
 <li>beta =&gt; beta channel</li>
 <li>edge =&gt; edge channel</li>
 </ul>
@@ -265,7 +267,7 @@ of the applications build process.</p>
 </ul>
 <h3 id="beta"><a class="header" href="#beta">Beta:</a></h3>
 <ul>
-<li>The beta channel is used to organize all the new changes, and apply patches to find the best way to implement them</li>
+<li>The beta channel is used to organize all the new changes</li>
 <li>The beta channel is pre-production and should be relatively stable during production </li>
 </ul>
 <h3 id="stable"><a class="header" href="#stable">Stable:</a></h3>
@@ -274,10 +276,13 @@ of the applications build process.</p>
 <li>All the code should be working properly and safely</li>
 <li>Depending on the new feature: 
 <ul>
-<li>The Major or Minor will be incremented and the patch will be reset to 0</li>
+<li>The Major or Minor will be incremented</li>
 </ul>
 </li>
 </ul>
+<h3 id="code-names"><a class="header" href="#code-names">Code Names</a></h3>
+<p>Each new release will have an accompanying code name associated with it, like v0.5's Aristotle code name. 
+These names will always be named after a famous scientist or influence in science. </p>
 <h2 id="version-system"><a class="header" href="#version-system">Version System</a></h2>
 <p>The projects follow the same semantic version system other Rust projects use:</p>
 <pre><code>Version M.m.P
@@ -351,7 +356,6 @@ be installed, as well as mdbook. All will be explained with the getting started 
 </ul>
 </li>
 </ul>
-<p><strong>Required Currently: Unix System (Mac or Linux)</strong></p>
 <h1 id="uniconv"><a class="header" href="#uniconv">UniConv</a></h1>
 <p>UniConv or Unit Converter is a basic Unit Converter Command Line program. This program contains the same parameters for all
 the functions, and is being worked to have the following modes: </p>
@@ -371,6 +375,10 @@ $ uniconv list
 </code></pre>
 <p>Working on this project would mean expanding this library a lot more, and 
 enabling various modes of conversion. </p>
+<p>Requires: </p>
+<ul>
+<li>Rust</li>
+</ul>
 <h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
 <p>When you want to get started in MKProjects, think about the following:</p>
 <ul>
@@ -380,7 +388,37 @@ enabling various modes of conversion. </p>
 <li>What can help with the most?</li>
 </ul>
 <h1 id="contact"><a class="header" href="#contact">Contact</a></h1>
+<p>The first step in helping with MKProjects is contacting an admin. To contact, email <a href="mailto:Mustafif0929@gmail.com">Mustafif0929@gmail.com</a>, 
+with the following information:</p>
+<ul>
+<li>Content, Development work or both</li>
+<li>Projects you would like to help with</li>
+<li>The Operating System you use </li>
+<li>Any other information you'd like to share</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Make Sure to Read About the Requirements to see which is better for you</li>
+<li>You don't necessarily need to know all requirements, this project is a learning experience</li>
+</ul>
 <h1 id="working-on-a-repository"><a class="header" href="#working-on-a-repository">Working on a Repository</a></h1>
+<p>Before you start working on a repository, make sure you have the following installed: </p>
+<h2 id="git"><a class="header" href="#git">Git</a></h2>
+<p>For any work, git must be installed to commit and push code to GitHub </p>
+<pre><code class="language-bash"># Debian Linux 
+$ sudo apt install git-all
+# Mac
+git --version
+</code></pre>
+<p>Windows: Visit this <a href="https://git-scm.com/download/win">link</a></p>
+<h2 id="development-work"><a class="header" href="#development-work">Development Work</a></h2>
+<p><strong>Rust</strong>: Visit <a href="http://rustup.rs">rustup.rs</a> for the properly installation method for your system. </p>
+<p>Once you have Rust, you can install the following crates: </p>
+<pre><code class="language-bash"># Markdown Book for documentations 
+$ cargo install mdbook
+# Crowbook to make Md -&gt; html, epub and latex/pdf
+$ cargo install crowbook
+</code></pre>
 <h1 id="best-practices"><a class="header" href="#best-practices">Best Practices</a></h1>
 <h1 id="repositories"><a class="header" href="#repositories">Repositories</a></h1>
 <h1 id="mkproj"><a class="header" href="#mkproj">MKProj</a></h1>

@@ -178,9 +178,11 @@
 talk about each respectively. </p>
 <h2 id="release-system"><a class="header" href="#release-system">Release System</a></h2>
 <p>In our release system, we will be following the edge -&gt; beta -&gt; stable channel format. 
+A new Stable release will always come in 4 weeks at around the 15th of every month. 
 Each of these programs will have the following branches to indicate the following channels: </p>
 <ul>
-<li>main =&gt; stable channel</li>
+<li>main =&gt; (Will Contain the Current Stable Release)</li>
+<li>stable =&gt; stable channel</li>
 <li>beta =&gt; beta channel</li>
 <li>edge =&gt; edge channel</li>
 </ul>
@@ -193,7 +195,7 @@ of the applications build process.</p>
 </ul>
 <h3 id="beta"><a class="header" href="#beta">Beta:</a></h3>
 <ul>
-<li>The beta channel is used to organize all the new changes, and apply patches to find the best way to implement them</li>
+<li>The beta channel is used to organize all the new changes</li>
 <li>The beta channel is pre-production and should be relatively stable during production </li>
 </ul>
 <h3 id="stable"><a class="header" href="#stable">Stable:</a></h3>
@@ -202,10 +204,13 @@ of the applications build process.</p>
 <li>All the code should be working properly and safely</li>
 <li>Depending on the new feature: 
 <ul>
-<li>The Major or Minor will be incremented and the patch will be reset to 0</li>
+<li>The Major or Minor will be incremented</li>
 </ul>
 </li>
 </ul>
+<h3 id="code-names"><a class="header" href="#code-names">Code Names</a></h3>
+<p>Each new release will have an accompanying code name associated with it, like v0.5's Aristotle code name. 
+These names will always be named after a famous scientist or influence in science. </p>
 <h2 id="version-system"><a class="header" href="#version-system">Version System</a></h2>
 <p>The projects follow the same semantic version system other Rust projects use:</p>
 <pre><code>Version M.m.P
